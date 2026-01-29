@@ -2,10 +2,331 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>はじめてのサイト</title>
+  <title>★☆★ ようこそ！！！ ★☆★</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+    
+    * {
+      cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><text y="24" font-size="24">🌟</text></svg>'), auto;
+    }
+    
+    body {
+      font-family: 'DotGothic16', 'MS Gothic', monospace;
+      overflow-x: hidden;
+      margin: 0;
+      padding: 20px;
+      min-height: 100vh;
+      animation: bgChange 0.5s infinite;
+    }
+    
+    @keyframes bgChange {
+      0% { background: #ff00ff; }
+      25% { background: #00ffff; }
+      50% { background: #ffff00; }
+      75% { background: #00ff00; }
+      100% { background: #ff00ff; }
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    
+    h1 {
+      font-size: 3em;
+      animation: rainbow 0.3s infinite, shake 0.1s infinite;
+      text-shadow: 3px 3px 0 #000, -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000;
+    }
+    
+    @keyframes rainbow {
+      0% { color: red; }
+      16% { color: orange; }
+      32% { color: yellow; }
+      48% { color: green; }
+      64% { color: blue; }
+      80% { color: purple; }
+      100% { color: red; }
+    }
+    
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-5px) rotate(-5deg); }
+      75% { transform: translateX(5px) rotate(5deg); }
+    }
+    
+    .marquee {
+      background: #000;
+      color: #0f0;
+      padding: 10px;
+      font-size: 1.5em;
+      margin: 20px 0;
+      border: 3px dashed #0f0;
+    }
+    
+    .blink {
+      animation: blink 0.3s infinite;
+    }
+    
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+    
+    .construction {
+      font-size: 2em;
+      margin: 20px;
+      animation: spin 1s linear infinite;
+      display: inline-block;
+    }
+    
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    
+    .counter-box {
+      background: #000;
+      color: #ff0;
+      padding: 15px;
+      margin: 20px auto;
+      border: 5px ridge #ff0;
+      display: inline-block;
+    }
+    
+    .counter {
+      font-size: 2em;
+      font-family: 'Courier New', monospace;
+    }
+    
+    .guestbook {
+      background: linear-gradient(45deg, #ff69b4, #00bfff);
+      padding: 20px;
+      margin: 20px 0;
+      border: 5px outset #ff69b4;
+      animation: borderColor 0.5s infinite;
+    }
+    
+    @keyframes borderColor {
+      0% { border-color: #ff69b4; }
+      50% { border-color: #00ff00; }
+      100% { border-color: #ff69b4; }
+    }
+    
+    .emoji-rain {
+      position: fixed;
+      font-size: 2em;
+      animation: fall linear forwards;
+      pointer-events: none;
+      z-index: 1000;
+    }
+    
+    @keyframes fall {
+      to {
+        transform: translateY(100vh) rotate(720deg);
+      }
+    }
+    
+    .dancing {
+      display: inline-block;
+      animation: dance 0.5s infinite;
+    }
+    
+    @keyframes dance {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+    
+    .visitor-msg {
+      background: #fff;
+      border: 3px double #000;
+      padding: 10px;
+      margin: 10px;
+      transform: rotate(-2deg);
+    }
+    
+    .visitor-msg:nth-child(even) {
+      transform: rotate(2deg);
+    }
+    
+    .welcome-img {
+      animation: bounce 0.5s infinite alternate;
+    }
+    
+    @keyframes bounce {
+      from { transform: scale(1); }
+      to { transform: scale(1.2); }
+    }
+    
+    .fire {
+      color: #ff4500;
+      text-shadow: 0 0 10px #ff4500, 0 0 20px #ff0, 0 0 30px #ff4500;
+      animation: fire 0.2s infinite;
+    }
+    
+    @keyframes fire {
+      0%, 100% { text-shadow: 0 0 10px #ff4500, 0 0 20px #ff0; }
+      50% { text-shadow: 0 0 20px #ff0, 0 0 30px #ff4500, 0 0 40px #ff0; }
+    }
+    
+    .link-btn {
+      display: inline-block;
+      padding: 15px 30px;
+      margin: 10px;
+      font-size: 1.2em;
+      background: linear-gradient(180deg, #ffff00 0%, #ff8c00 100%);
+      border: 4px outset #ffcc00;
+      color: #000;
+      text-decoration: none;
+      animation: pulse 0.5s infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+    
+    .link-btn:hover {
+      background: linear-gradient(180deg, #ff0000 0%, #ff00ff 100%);
+    }
+    
+    .stars {
+      position: fixed;
+      pointer-events: none;
+      z-index: 999;
+    }
+    
+    footer {
+      margin-top: 50px;
+      padding: 20px;
+      background: #000;
+      color: #0f0;
+      border-top: 5px dashed #0f0;
+    }
+    
+    .webring {
+      background: repeating-linear-gradient(
+        45deg,
+        #ff0000,
+        #ff0000 10px,
+        #ffff00 10px,
+        #ffff00 20px
+      );
+      padding: 10px;
+      margin: 20px 0;
+    }
+  </style>
 </head>
 <body>
-  <h1>Hello! GitHub Pagesで公開できました！</h1>
-  <p>これは自動で公開されたウェブサイトです。</p>
+  <div class="container">
+    <p class="welcome-img">🎊🎊🎊🎊🎊</p>
+    
+    <h1>ようこそ！！！健太郎のホームページへ！！！</h1>
+    
+    <p class="blink" style="font-size: 1.5em; color: #fff; background: #f00; padding: 10px;">
+      ⚠️ このサイトは Internet Explorer 4.0 以上推奨です ⚠️
+    </p>
+    
+    <marquee class="marquee" behavior="alternate" scrollamount="15">
+      ★★★ いらっしゃいませ！！！あなたは <span class="counter" id="counter">000000</span> 人目の訪問者です！！！キリ番踏んだら掲示板に報告してね！ ★★★
+    </marquee>
+    
+    <div>
+      <span class="construction">🚧</span>
+      <span class="fire" style="font-size: 1.5em;">永遠に工事中！！！</span>
+      <span class="construction">🚧</span>
+    </div>
+    
+    <hr style="border: 3px dashed magenta;">
+    
+    <h2 style="color: #fff; text-shadow: 2px 2px #000;">
+      <span class="dancing">コ</span>
+      <span class="dancing" style="animation-delay: 0.1s;">ン</span>
+      <span class="dancing" style="animation-delay: 0.2s;">テ</span>
+      <span class="dancing" style="animation-delay: 0.3s;">ン</span>
+      <span class="dancing" style="animation-delay: 0.4s;">ツ</span>
+    </h2>
+    
+    <a href="#" class="link-btn">📝 日記</a>
+    <a href="#" class="link-btn">🎮 ゲーム攻略</a>
+    <a href="#" class="link-btn">🎵 MIDIの部屋</a>
+    <a href="#" class="link-btn">📷 素材集</a>
+    
+    <hr style="border: 3px dotted cyan;">
+    
+    <div class="guestbook">
+      <h2 class="blink">📖 ゲストブック 📖</h2>
+      <div class="visitor-msg">
+        <strong>名無しさん</strong>: キリ番ゲットォォォ！！！
+      </div>
+      <div class="visitor-msg">
+        <strong>通りすがり</strong>: 素敵なHPですね(^^)
+      </div>
+      <div class="visitor-msg">
+        <strong>管理人</strong>: 書き込みありがとう！また来てね☆
+      </div>
+    </div>
+    
+    <div class="webring">
+      <strong>🔗 WEBリング 🔗</strong><br>
+      [← 前のサイト] [ランダム] [次のサイト →]
+    </div>
+    
+    <footer>
+      <p>Since 1999 (嘘)</p>
+      <p>
+        <span class="blink">★</span>
+        リンクフリーです！バナーは直リンク禁止！
+        <span class="blink">★</span>
+      </p>
+      <p>
+        <marquee scrollamount="5">
+          このサイトは JavaScript を使用しています ／ 最終更新日: ずっと前 ／ 管理人: 健太郎 ／ 無断転載禁止！
+        </marquee>
+      </p>
+    </footer>
+  </div>
+  
+  <script>
+    const counter = document.getElementById('counter');
+    let count = Math.floor(Math.random() * 90000) + 10000;
+    counter.textContent = String(count).padStart(6, '0');
+    
+    setInterval(() => {
+      count += Math.floor(Math.random() * 3);
+      counter.textContent = String(count).padStart(6, '0');
+    }, 3000);
+    
+    const emojis = ['⭐', '🌟', '✨', '💫', '🎵', '❤️', '🌈', '🎀', '🦋', '🌸'];
+    
+    function createEmoji() {
+      const emoji = document.createElement('div');
+      emoji.className = 'emoji-rain';
+      emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+      emoji.style.left = Math.random() * 100 + 'vw';
+      emoji.style.top = '-50px';
+      emoji.style.animationDuration = (Math.random() * 3 + 2) + 's';
+      document.body.appendChild(emoji);
+      
+      setTimeout(() => emoji.remove(), 5000);
+    }
+    
+    setInterval(createEmoji, 300);
+    
+    document.addEventListener('mousemove', (e) => {
+      if (Math.random() > 0.7) {
+        const star = document.createElement('div');
+        star.className = 'stars';
+        star.textContent = '✨';
+        star.style.left = e.pageX + 'px';
+        star.style.top = e.pageY + 'px';
+        star.style.fontSize = (Math.random() * 20 + 10) + 'px';
+        document.body.appendChild(star);
+        
+        setTimeout(() => star.remove(), 500);
+      }
+    });
+  </script>
 </body>
 </html>
+
