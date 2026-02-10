@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "X Saved Searches Manager",
+  "version": "1.0.0",
+  "description": "Xの保存した検索を簡単に追加・削除・管理できる拡張機能",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://x.com/*",
+    "https://twitter.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://x.com/*", "https://twitter.com/*"],
+      "js": ["content.js"],
+      "css": ["content.css"]
+    }
+  ]
+}
