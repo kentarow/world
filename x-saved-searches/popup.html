@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>X Saved Searches</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>保存した検索</h1>
+    </header>
+
+    <div class="add-search">
+      <input type="text" id="searchInput" placeholder="検索キーワードを入力...">
+      <button id="addBtn" title="追加">+</button>
+    </div>
+
+    <div class="search-list" id="searchList">
+    </div>
+
+    <div class="empty-state" id="emptyState">
+      <p>保存した検索がありません</p>
+      <p class="hint">上のフィールドから検索を追加してください</p>
+    </div>
+
+    <footer>
+      <button id="exportBtn" class="secondary-btn">エクスポート</button>
+      <button id="importBtn" class="secondary-btn">インポート</button>
+      <input type="file" id="importFile" accept=".json" style="display: none;">
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
